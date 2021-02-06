@@ -7,7 +7,7 @@ import string
 class Boggle():
 
     def __init__(self):
-
+#Does something with words.txt
         self.words = self.read_dict("words.txt")
 
     def read_dict(self, dict_path):
@@ -143,3 +143,7 @@ class Boggle():
         # Sad panda.
 
         return False
+
+
+
+game_board = Boggle()
