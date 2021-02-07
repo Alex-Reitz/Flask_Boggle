@@ -1,11 +1,13 @@
 {% extends "base.html" %}
-
 {% block content %}
-<h1>Welcome to Flask boggle!</h1>
-<form>
+<h1>Welcome to Flask boggle! </h1>
+<form id="formGuess" method="POST" action="">
     <label for="guess">Your guess: </label>
-    <input type="text" name="guess">
-    <button type="submit" name="submit">Submit</button>
+    <input id="guessValue" type="text" name="guess">
+    <button id="submit" type="submit" name="submit">Submit</button>
 </form>
 {{board}}
+<script src="https://unpkg.com/jquery"></script>
+<script src="/static/home.js" charset="utf-8"></script>
 {%endblock%}
+
