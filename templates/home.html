@@ -1,16 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Welcome to Flask boggle! </h1>
-<form id="formGuess" method="post" action="#">
+<form id="formGuess" method="post">
     <label id="labelGuess" for="guess">Your guess: </label>
-    <input id="guessValue" type="text" name="guess">
+    <input id="guessValue" type="text" name="guess" autofocus>
     <button id="submit" type="submit" name="submit">Submit</button>
 </form>
 <h1 id="gameOver">Game Over!</h1>
 <div id="timer">
     <p>Time left:</p>
 </div>
-{{board}}
+<ul>
+    {%for letter in board%}
+        <p>{{letter}}</p>
+    {% endfor %}
+</ul>
+<p id="msg"></p>
 <script src="https://unpkg.com/jquery"></script>
 <script src="/static/home.js" charset="utf-8"></script>
 {%endblock%}
